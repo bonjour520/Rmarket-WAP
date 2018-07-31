@@ -1,0 +1,168 @@
+@import "reset.scss";
+
+.login{
+  text-align: center;
+  section{
+    width: rem(750);
+    height: rem(440);
+    margin: 0 auto;
+    background: url('../../static/imgs/loginbg.png') no-repeat center/100%;
+    box-sizing: border-box;
+    .logoBox{
+      padding-top: rem(96);
+      background-color: $mainColor;
+      .logo{
+        width: rem(94);
+        height: rem(89);
+      }
+      .welcome{
+        font-size: rem(36);
+        color: #fff;
+        margin-top: rem(30);
+        padding-bottom: rem(2);
+      }
+    }
+    .bolang{
+      width: 100%;
+      margin-top: -1px;
+    }
+  }
+  main{
+    width: rem(750);
+    margin: 0 auto;
+    margin-top:rem(100);
+    .ipts{
+      width: rem(600);
+      margin: 0 auto;
+      overflow: hidden;
+      @mixin commonIpt{
+        width: 100%;
+        height: rem(78);
+        border: 1px solid #d7d7d7;
+        line-height: rem(78);
+        border-radius: rem(39);
+        text-indent: rem(100);
+        font-size: rem($fontSize);
+        box-sizing: border-box;
+      }
+      .userName,.pwd{
+        position: relative;
+        width: 100%;
+        .userIpt{
+          @include commonIpt;
+          background: url("../../static/imgs/login/userName.png") no-repeat rem(40) rem(25) / rem(26) rem(28);
+        }
+        .headtext{
+          position: absolute;
+          left: rem(22);
+          font-size: rem(26);
+          top: rem(26);
+        }
+        .userPhone{
+          @include commonIpt;
+        }
+      }
+      .pwd{
+        margin-top: rem(30);
+        .pwdIpt{
+          @include commonIpt;
+          background: url("../../static/imgs/login/pwd.png") no-repeat rem(40) rem(25) / rem(22) rem(28);
+        }
+      }
+
+      .step2picIpt {
+          width: 8rem;
+          height: 1.04rem;
+          border: 1px solid #d7d7d7;
+          line-height: 1.04rem;
+          border-radius: 0.52rem;
+          border-right: none;
+          box-sizing: border-box;
+          font-size: 0.3733333333rem;
+          box-sizing: border-box;
+          vertical-align: bottom;
+          margin-top: 0.4rem;
+          padding: 0 2.6666666667rem 0 1.4666666667rem;
+          background: url(../../static/imgs/forgetPwd/forget.png) no-repeat 0.5333333333rem 0.2933333333rem/0.3466666667rem 0.3733333333rem;
+      }
+      .getImgCode {
+          position: absolute;
+          width: 2.4rem;
+          height: 0.8666666667rem;
+          box-sizing: border-box;
+          border: 1px solid #f8f8f8;
+          top: 0.5066666667rem;
+          right: 0.1333333333rem;
+          border-radius: 0.52rem;
+      }
+      
+      .getPhoneCode{
+        position: absolute;
+        top: 3px;
+        right: 0;
+        font-size: rem($fontSize);
+        margin-left: 0;
+        width: rem(180);
+        vertical-align: middle;
+        height: rem(78);
+        background: $mainUnColor;
+        color: #f8f8f8;
+        box-sizing: border-box;
+        border-left: none;
+        border: 1px solid $mainColor;
+        border-top-right-radius:rem(39);
+        border-bottom-right-radius:rem(39);
+        &.active{
+          background: $mainColor;
+          color: #fff;
+        }
+      }
+
+      //登录按钮
+      .loginBtn{
+        width: 100%;
+        height: rem(78);
+        background: $mainUnColor;
+        color: #f8f8f8;
+        border: none;
+        border-radius: rem(39);
+        margin-top: rem(50);
+        font-size: rem($fontSize);
+        &.active{
+          background: $mainColor;
+          color: #fff;
+        }
+      }
+      .forget{
+        float: right;
+        font-size: rem($fontSize);
+        color: #666;
+        margin-top: rem(30);
+      }
+    }
+    .msg-tips{
+      background: rem(600);
+      background: #f2f2f2;
+      color: #999999;
+      font-size: rem(22);
+      height: rem(50);
+      line-height: rem(50);
+      text-align: center;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin-top: rem(24);
+    }
+  }
+  footer{
+    p{
+      position: fixed;
+      left: 50%;
+      bottom: rem(30);
+      transform: translate3d(-50%,-20%,0);
+      font-size: rem($fontSize);
+      span{
+        color: #ff3333;
+      }
+    }
+  }
+}

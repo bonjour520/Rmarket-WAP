@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+
+@import "reset";
+html{
+  background: #f2f2f2;
+  color: #222;
+}
+
+article{
+  width: rem(750);
+  h6{
+    line-height: rem(86);
+    font-size: rem($fontSize);
+    text-align: left;
+    margin-left: rem(30);
+  }
+  section{
+    background: #fff;
+    min-height: rem(1248);
+    li{
+      overflow: hidden;
+      width: rem(690);
+      margin: 0 auto;
+      font-size: rem($fontSize);
+      border-bottom: 1px solid $borderColor;
+      box-sizing: border-box;
+      &:last-child{
+        border-bottom: none;
+      }
+      .province{
+        float: left;
+        width: rem(150);
+        text-align: left;
+        line-height: rem(50);
+        padding-top: rem(20);
+      }
+      .city{
+        float: left;
+        padding-top: rem(20);
+        max-width: rem(500);
+        text-align: left;
+        padding-bottom: rem(20);
+        span{
+          display: inline-block;
+          line-height: rem(50);
+          margin-right: rem(30);
+        }
+      }
+    }
+  }
+}

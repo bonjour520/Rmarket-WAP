@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+
+@import "reset";
+html{
+  background: #f2f2f2;
+  color: #222;
+  min-height: 100vh;
+}
+
+
+article{
+  width: rem(750);
+  section{
+    width: rem(750);
+    background: #fff;
+    padding-bottom: rem(6);
+    .lable{
+      &.price{
+        padding-top: rem(30);
+      }
+      width: rem(690);
+      margin: rem(15) auto;
+      overflow: hidden;
+      font-size: rem($fontSize);
+      text-align: left;
+      &:nth-of-type(1){
+        margin-top: rem(0);
+      }
+      .tit{
+        display: inline-block;
+        line-height: rem(80);
+        width: rem(190);
+        text-align: right;
+      }
+      @mixin ipts{
+        border: 1px solid $borderColor;
+        border-radius: rem(6);
+        height: rem(80);
+        line-height: rem(80);
+      }
+      .priceIpt,.sellIpt,.supplyIpt{
+        @include ipts;
+        width: rem(320);
+
+      }
+      //单位
+      .unit{
+        display: inline-block;
+        margin-left: rem(20);
+      }
+      .addrSel{
+        display: inline-block;
+        select{
+          width: rem(150);
+          height: rem(80);
+          border: 1px solid $borderColor;
+          border-radius: rem(6);
+        }
+      }
+      @mixin txtarea{
+        width: rem(480);
+        height: rem(180);
+        border-radius: rem(6);
+        box-sizing: border-box;
+        text-indent: rem(20);
+      }
+      //详细地址
+      .detailArea{
+        @include txtarea;
+        margin-top: rem(20);
+        margin-left: rem(198);
+      }
+      //备注
+      .noteIpt{
+        @include txtarea;
+      }
+      .dateIpt,.peopleIpt,.phoneIpt{
+        width: rem(480);
+        @include ipts;
+      }
+    }
+    //确认报价按钮
+    .sureBtn{
+      display: block;
+      width: rem(690);
+      margin: rem(100) auto;
+      height: rem(80);
+      line-height: rem(80);
+      background: $mainColor;
+      color: #fff;
+      border: none;
+      border-radius: rem(10);
+      font-size: rem($fontSize);
+    }
+  }
+}

@@ -1,0 +1,115 @@
+@charset "utf-8";
+@import "base.less";
+@import "reset.scss";
+
+.order{
+  &-top{
+    height: rem(175);
+    //background: url('../../static/imgs/rm_order_detail_img.png') no-repeat center top;
+    background-size: 100%;
+    h2{
+      line-height: rem(175);
+      padding-left: rem(120);
+      color: #fff;
+      font-size: rem(32);
+    }
+  }
+  &-addres{
+    margin-top: 15px;
+    height: rem(130);
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 rem(20);
+    i{
+      display: block;
+      width: 8%;
+      text-align: right;
+      margin-right: rem(15);
+      font-size: rem(46);
+    }
+    div{
+      flex: 1;
+      p{
+        font-size: rem(28);
+        line-height: 1.8;
+        padding-right: rem(15);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  &-issue{
+    background: #fff;
+    display: flex;
+    height: rem(210);
+    box-sizing: border-box;
+    padding: rem(30);
+    margin-top: 15px;
+    align-items: center;
+    font-size: rem(28);
+    img{
+      display: block;
+      width: rem(150);
+      height: rem(150);
+      border-radius: 5px;
+      margin-right: 15px;
+    }
+    p{
+      flex: 1;
+    }
+  }
+
+  &-list,&-item{
+    margin-top: 15px;
+    background: #fff;
+    box-sizing: border-box;
+    padding: rem(30);
+    min-height: rem(100);
+    p{
+      font-size: rem(28);
+      white-space: nowrap;
+      margin-bottom: rem(20);
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-item{
+    display: flex; 
+    padding: rem(15) 0;
+    text-align: center;
+    align-items: center;
+    div{
+      display: block;
+      width: 50%;
+      flex: 1;
+      border-right: 1px solid $boder_color;
+      &:last-child{
+        border-right: none;
+      }
+      i{
+        position: relative;
+        top: 2px;
+        font-size: rem(40);
+      }
+    }
+    .logo{
+      display: block;
+      position: relative;
+      width: rem(45);
+      height: rem(45);
+      border-radius: 50%;
+      top: rem(2);
+      padding: 0 rem(10);
+    }
+    .shop-title{
+      font-size: rem(32);
+      font-weight: normal;
+    }
+  }
+}

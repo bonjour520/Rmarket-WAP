@@ -1,0 +1,246 @@
+
+@import "reset";
+
+$fontSize:28;
+
+.login{
+  section{
+    width: rem(750);
+    height: rem(440);
+    margin: 0 auto;
+    background: url('../../static/imgs/loginbg.png') no-repeat center/100%;
+    box-sizing: border-box;
+    text-align: center;
+    .logoBox{
+      padding-top: rem(96);
+      background-color: $mainColor;
+      .logo{
+        width: rem(94);
+        height: rem(89);
+      }
+      .welcome{
+        font-size: rem(36);
+        color: #fff;
+        margin-top: rem(30);
+        padding-bottom: rem(2);
+      }
+    }
+    .bolang{
+      width: 100%;
+      margin-top: -1px;
+    }
+  }
+  main{
+    width: rem(750);
+    margin-top:rem(100);
+    .ipts{
+      width: rem(600);
+      margin: 0 auto;
+      overflow: hidden;
+      @mixin commonIpt{
+        width: 100%;
+        height: rem(78);
+        border: 1px solid #d7d7d7;
+        line-height: rem(78);
+        border-radius: rem(39);
+        text-indent: rem(100);
+        font-size: rem($fontSize);
+        box-sizing: border-box;
+      }
+      .userName{
+        width: 100%;
+        // display: none;
+        .userIpt{
+          @include commonIpt;
+          background: url("../../static/imgs/login/userName.png") no-repeat rem(40) rem(22) / rem(26) rem(28);
+        }
+        .step1Btn{
+          width: 100%;
+          height: rem(78);
+          border: none;
+          border-radius: rem(39);
+          color: #f8f8f8;
+          font-size: rem($fontSize);
+          background: $mainUnColor;
+          margin-top: rem(50);
+          &.active{
+            background: $mainColor;
+            color: #fff;
+          }
+        }
+      }
+
+
+
+      .step2{
+        width: 100%;
+        .step2P{
+          font-size: rem(26);
+        }
+        @mixin common2Ipt{
+          width: rem(410);
+          height: rem(78);
+          border: 1px solid #d7d7d7;
+          line-height: rem(78);
+          border-top-left-radius:rem(39);
+          border-bottom-left-radius:rem(39);
+          border-right: none;
+          box-sizing: border-box;
+          text-indent: rem(100);
+          font-size: rem($fontSize);
+          box-sizing: border-box;
+          vertical-align: bottom;
+          margin-top: rem(30);
+        }
+        .step2Ipt{
+          @include common2Ipt;
+          background: url("../../static/imgs/forgetPwd/forget.png") no-repeat rem(40) rem(22) / rem(26) rem(28);
+        }
+        .step2picIpt{
+          width: rem(600);
+          height: rem(78);
+          border: 1px solid #d7d7d7;
+          line-height: rem(78);
+          border-radius:rem(39);
+          border-right: none;
+          box-sizing: border-box;
+          font-size: rem($fontSize);
+          box-sizing: border-box;
+          vertical-align: bottom;
+          margin-top: rem(30);
+          padding: 0 rem(200) 0 rem(110);
+          background: url("../../static/imgs/forgetPwd/forget.png") no-repeat rem(40) rem(22) / rem(26) rem(28);
+        }
+        .getImgCode{
+          position: absolute;
+          width: rem(180);
+          height: rem(65);
+          box-sizing: border-box;
+          border: 1px solid #f8f8f8;
+          top: rem(38);
+          right: rem(10);
+          border-radius: rem(39);
+        }
+        .getPhoneCode{
+          font-size: rem($fontSize);
+          margin-left: 0;
+          width: rem(180);
+          vertical-align: middle;
+          margin-top: rem(30);
+          height: rem(78);
+          background: $mainUnColor;
+          color: #f8f8f8;
+          box-sizing: border-box;
+          border-left: none;
+          border: 1px solid $mainColor;
+          border-top-right-radius:rem(39);
+          border-bottom-right-radius:rem(39);
+          &.active{
+            background: $mainColor;
+            color: #fff;
+          }
+        }
+        .step2Btn{
+          width: 100%;
+          height: rem(78);
+          background: $mainUnColor;
+          border: none;
+          color: #f8f8f8;
+          border-radius: rem(39);
+          margin-top: rem(50);
+          font-size: rem($fontSize);
+          &.active{
+            background: $mainColor;
+            color: #fff;
+          }
+        }
+      }
+
+      .step3{
+        width: 100%;
+        @mixin ipts{
+          width: 100%;
+          height: rem(78);
+          border: 1px solid #d7d7d7;
+          border-radius: rem(39);
+          font-size: rem($fontSize);
+          text-indent: rem(100);
+          box-sizing: border-box;
+          background: url("../../static/imgs/login/pwd.png") no-repeat rem(40) rem(25) / rem(22) rem(28);
+        }
+        @mixin iptsImg{
+          margin:  rem(10) auto 0 auto;
+          width: rem(24);
+          height: rem(16);
+          vertical-align: bottom;
+        }
+        @mixin iptsWarnTxt{
+          padding: rem(15) rem(18);
+          background: #f2f2f2;
+          color: #999;
+          border-radius: rem(10);
+        }
+        .pwd{
+          width: 100%;
+          .pwdIpt{
+            @include ipts;
+          }
+          .warn1{
+            display: none;
+            img{
+              @include iptsImg;
+            }
+            .warn1Pwd{
+              @include iptsWarnTxt;
+            }
+          }
+        }
+        .rePwd{
+          width: 100%;
+          margin-top: rem(30);
+          .rePwdIpt{
+            @include ipts;
+          }
+          .warn2{
+            display: none;
+            img{
+              @include iptsImg;
+            }
+            .warn2Pwd{
+              @include iptsWarnTxt;
+            }
+          }
+        }
+        .step3Btn{
+          width: 100%;
+          height: rem(78);
+          border-radius: rem(39);
+          color: #f8f8f8;
+          background: $mainUnColor;
+          border: none;
+          font-size: rem($fontSize);
+          margin-top: rem(50);
+          &.active{
+            color: #fff;
+            background: $mainColor;
+          }
+        }
+      }
+
+
+    }
+
+  }
+  footer{
+    p{
+      position: fixed;
+      left: 50%;
+      bottom: rem(30);
+      transform: translate3d(-50%,-20%,0);
+      font-size: rem($fontSize);
+      span{
+        color: #ff3333;
+      }
+    }
+  }
+}

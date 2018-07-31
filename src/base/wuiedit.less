@@ -1,0 +1,32 @@
+@main_color: #00c55c;
+@main_uncolor: #4cd58d;
+
+.footer{
+  .weui-tabbar__item.weui-bar__item_on .weui-tabbar__icon, .weui-tabbar__item.weui-bar__item_on .weui-tabbar__icon > i, .weui-tabbar__item.weui-bar__item_on .weui-tabbar__label{
+    color: @main_color;
+  }
+}
+.x-scroll{
+  .weui-cells:before{border-top: none;}
+  .weui-cells:after{border-bottom: none;}
+  .weui-cell:before{border-top: none;}
+  .weui-cells_checkbox .weui-check:checked + .vux-checklist-icon-checked:before{color: @main_color;}
+  .vux-tab .vux-tab-item.vux-tab-selected{color: #333;}
+  .vux-slider > .vux-indicator, .vux-slider .vux-indicator-right{bottom: 0;}
+  .xs-plugin-pullup-container{font-size: 0.38rem};
+}
+
+.comment-top{
+  border-top: .625rem solid #fff;
+  background: #fafafa;
+  img{
+    border-radius: 50%;
+    display: block;
+    border: none;
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-top: 1.25rem;
+  }
+}
+.weui-toast{width: 3rem; min-height: 3.3rem!important;}
+.weui-toast.weui-toast_text{min-height: 1rem!important;}

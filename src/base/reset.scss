@@ -1,0 +1,131 @@
+@charset "utf-8";
+$color_main: #00c55c;
+$color_unmain: #4cd58d;
+$boder_color: #d7d7d7;
+$fontSize: 28;
+$borderColor:#d6d6d6;
+$mainColor:#00c55c;
+$mainUnColor: #4cd58d;
+
+@mixin font-dpr($font-size){
+  font-size: $font-size;
+  [data-dpr="2"] & {
+      font-size: $font-size * 2;
+  }
+  [data-dpr="3"] & {
+      font-size: $font-size * 3;
+  }
+}
+
+@function rem($px){
+  // 布局是750px布局 所以除以75
+  @return ($px / 750 * 10) + rem;
+}
+
+// 常用边距
+.rmt10{margin-top: rem(10)}
+.rmt20{margin-top: rem(20)}
+.rmt30{margin-top: rem(30)}
+.rmt40{margin-top: rem(40)}
+.rmt50{margin-top: rem(50)}
+.rmt60{margin-top: rem(60)}
+.rmt70{margin-top: rem(70)}
+.rmt80{margin-top: rem(80)}
+.rmt90{margin-top: rem(90)}
+.rmt100{margin-top: rem(100)}
+.rmb10{margin-bottom: rem(10)}
+.rmb20{margin-bottom: rem(20)}
+.rmb30{margin-bottom: rem(30)}
+.rmb40{margin-bottom: rem(40)}
+.rmb50{margin-bottom: rem(50)}
+.rmb60{margin-bottom: rem(60)}
+.rmb70{margin-bottom: rem(70)}
+.rmb80{margin-bottom: rem(80)}
+.rmb90{margin-bottom: rem(90)}
+.rmb100{margin-bottom: rem(100)}
+.rpt10{padding-top: rem(10)}
+.rpt20{padding-top: rem(20)}
+.rpt30{padding-top: rem(30)}
+.rpt40{padding-top: rem(40)}
+.rpt50{padding-top: rem(50)}
+.rpt60{padding-top: rem(60)}
+.rpt70{padding-top: rem(70)}
+.rpt80{padding-top: rem(80)}
+.rpt90{padding-top: rem(90)}
+.rpt100{padding-top: rem(100)}
+.rpb10{padding-bottom: rem(10)}
+.rpb20{padding-bottom: rem(20)}
+.rpb30{padding-bottom: rem(30)}
+.rpb40{padding-bottom: rem(40)}
+.rpb50{padding-bottom: rem(50)}
+.rpb60{padding-bottom: rem(60)}
+.rpb70{padding-bottom: rem(70)}
+.rpb80{padding-bottom: rem(80)}
+.rpb90{padding-bottom: rem(90)}
+.rpb100{padding-bottom: rem(100)}
+
+// 常用高度
+
+.indexH-100{height: rem(200);}
+.indexH-150{height: rem(300);}
+.indexH-175{height: rem(350);}
+.indexH-200{height: rem(400);}
+.indexH-250{height: rem(500);}
+.indexH-275{height: rem(550);}
+.indexH-300{height: rem(600);}
+
+// 常用按钮
+.btn-default {
+  min-height: rem(88);
+  line-height: 1;
+  font-size: rem(32);
+  border: 1px solid #eee;
+  border-radius: 4px;
+  width: 100%;
+  margin-top: rem(20);
+  background: #f7f7f7;
+  outline: none;
+  // 实心
+  &.btn-success{ background: #19be6b; border-color: #19be6b; color: #fff; }
+  &.btn-primary{ background: #2d8cf0; border-color: #2d8cf0; color: #fff; }
+  &.btn-warning{ background: #ff9900; border-color: #ff9900; color: #fff; }
+  &.btn-light-main{ background: #4cd58d; border-color: #4cd58d; color: #fff; }
+  &.btn-main{ background: #00c55c; border-color: #00c55c; color: #fff; }
+  &.btn-light-warning{ background: #fdb952; border-color: #fdb952; color: #fff; }
+  &.btn-error{ background: #ed3f14; border-color: #ed3f14; color: #fff; }
+  &.btn-light-primary{ background: #5cadff; border-color: #5cadff; color: #fff; }
+  &.btn-dark-primary{ background: #2b85e4; border-color: #2b85e4; color: #fff; }
+  // 空心
+
+  &.btn-line-default{ background: #fff; border-color: #888; color: #888; }
+  &.btn-line-success{ background: #fff; border-color: #19be6b; color: #19be6b; }
+  &.btn-line-primary{ background: #fff; border-color: #2d8cf0; color: #2d8cf0; }
+  &.btn-line-warning{ background: #fff; border-color: #ff9900; color: #ff9900; }
+  &.btn-line-main{ background: #fff; border-color: #00c55c; color: #00c55c; }
+  &.btn-line-light-warning{ background: #fff; border-color: #fdb952; color: #fdb952; }
+  &.btn-line-error{ background: #fff; border-color: #ed3f14; color: #ed3f14; }
+  &.btn-line-light-primary{ background: #fff; border-color: #5cadff; color: #5cadff; }
+  &.btn-line-dark-primary{ background: #fff; border-color: #2b85e4; color: #2b85e4; }
+}
+// 透明度
+@for $i from 1 to 9 {
+  .option0_#{$i} {
+    opacity: $i/10;
+  }
+};
+
+textarea:disabled, input:not([type]):disabled, input[type="color" i]:disabled, input[type="date" i]:disabled, input[type="datetime" i]:disabled, input[type="datetime-local" i]:disabled, input[type="email" i]:disabled, input[type="month" i]:disabled, input[type="password" i]:disabled, input[type="number" i]:disabled, input[type="search" i]:disabled, input[type="tel" i]:disabled, input[type="text" i]:disabled, input[type="time" i]:disabled, input[type="url" i]:disabled, input[type="week" i]:disabled {
+  background-color: #fff;
+}
+
+// 常用文字大小
+.rf-20{font-size: rem(20)!important}
+.rf-24{font-size: rem(24)!important}
+.rf-26{font-size: rem(26)!important}
+.rf-28{font-size: rem(28)!important}
+.rf-30{font-size: rem(30)!important}
+.rf-32{font-size: rem(32)!important}
+.rf-36{font-size: rem(36)!important}
+.rf-40{font-size: rem(40)!important}
+.rf-48{font-size: rem(48)!important}
+.rf-60{font-size: rem(60)!important}

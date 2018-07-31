@@ -1,0 +1,158 @@
+@charset "utf-8";
+@main_color: #00c55c;
+/* CSS Document */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video, input {margin: 0;padding: 0;border: none;outline: 0;font-size: 100%;font: simSun;vertical-align: baseline;font-family: "Microsoft YaHei"}
+html, body {font-size: 62.5%;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+body {font-family: arial, sans-serif;background: #f7f7f7;}
+.pb0{padding-bottom:0;}
+.pb1{padding-bottom:130px;}
+.wbg {background: #fff;}
+ol, ul {list-style: none;}
+ul li {list-style-type: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: '';content: none;}
+ins {text-decoration: none;}
+del {text-decoration: line-through;}
+table {border-collapse: collapse;border-spacing: 0;}
+.clear {clear: both;}
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+.pos {position: relative;}
+.fl {float: left;}
+.fr {float: right;}
+.hide {display: none!important}
+.overf{overflow:hidden;}
+a {text-decoration: none;}
+a, div {-webkit-tap-highlight-color: transparent;-webkit-touch-callout: none;-webkit-user-select: none;}
+input[type="button"], input[type="submit"], input[type="reset"] {-webkit-appearance: none;-webkit-tap-highlight-color: transparent;-webkit-touch-callout: none;-webkit-user-select: none;}
+textarea,select,input{-webkit-appearance: none; -moz-appearance: none; -o-appearance: none; appearance: none;}
+button{outline: none;}
+.xian1 {
+  display: block;
+  width: 1px;
+  height: .5rem;
+  background: #999;
+}
+/* 
+ * 其他常用样式
+ */
+.show {display: block;}
+.hide {display: none;}
+.flex1 { flex: 1}
+.tr{text-align: right;}
+.tc{text-align: center;}
+.tl{text-align: left}
+.cr-pink { color: rgba(255, 109, 109, 1)!important}
+.cr-qlan { color: rgba(109, 178, 255, 1)}
+.cr-lv { color: green;}
+.cr-qlv { color: rgba(132, 200, 32, 1)}
+.cr-lan { color: rgba(68, 151, 255, 1)}
+.cr-cheng { color: rgba(255, 208, 80, 0.973)}
+.cr-zi { color: rgba(255, 123, 224, 1)}
+.cr-fff {color: #ffffff;}
+.cr-999 {color: #999999}
+.cr-666 {color: #666666}
+.cr-333 {color: #333333}
+.bg-f{ background: #ffffff!important}
+.bg-f7{ background: #f7f7f7!important}
+.text-ws{white-space: nowrap}
+.layout-flex { display:  flex!important; flex-wrap: nowrap!important;}
+.flex-item { flex: 1!important;}
+.flex-jc-sb{justify-content: space-between!important;}
+.flex-jc-c{justify-content: center!important;}
+.flex-ai-c{align-items: center!important}
+.border_btm1{border-bottom: 1px solid #d7d7d7!important;}
+.border_dbtm1{border-bottom: 1px dashed #d7d7d7!important;}
+.border_no{ border: none!important}
+.border_rd_no{ border-radius: none!important}
+.fl{ float: left!important;}
+.fr{ float: right!important}
+
+/*
+ * 字体大小
+ */
+.fw{font-weight: 600!important}
+.f12{font-size: 12px!important}
+.f14{font-size: 14px!important}
+.f16{font-size: 16px!important}
+.f18{font-size: 18px!important}
+.f20{font-size: 20px!important}
+.f22{font-size: 22px!important}
+.f24{font-size: 24px!important}
+.f28{font-size: 28px!important}
+.f30{font-size: 30px!important}
+.f36{font-size: 36px!important}
+
+/*
+ * 常用边距
+ */
+
+ .mt0{margin-top: 0px!important}
+ .mt10{margin-top: 10px!important}
+ .mt15{margin-top: 15px!important}
+ .mt20{margin-top: 20px!important}
+ .mt25{margin-top: 25px!important}
+ .mt30{margin-top: 30px!important}
+ .mt35{margin-top: 35px!important}
+ .mb10{margin-bottom: 10px!important}
+ .mb15{margin-bottom: 15px!important}
+ .mb20{margin-bottom: 20px!important}
+ .mb25{margin-bottom: 25px!important}
+ .mb30{margin-bottom: 30px!important}
+ .mb35{margin-bottom: 35px!important}
+ .ml10{margin-left: 10px!important}
+ .ml15{margin-left: 15px!important}
+ .ml20{margin-left: 20px!important}
+ .ml25{margin-left: 25px!important}
+ .ml30{margin-left: 30px!important}
+ .ml35{margin-left: 35px!important}
+ .mr10{margin-right: 10px!important}
+ .mr15{margin-right: 15px!important}
+ .mr20{margin-right: 20px!important}
+ .mr25{margin-right: 25px!important}
+ .mr30{margin-right: 30px!important}
+ .mr35{margin-right: 35px!important}
+ .pt10{padding-top: 10px!important}
+ .pt15{padding-top: 15px!important}
+ .pt20{padding-top: 20px!important}
+ .pt25{padding-top: 25px!important}
+ .pt30{padding-top: 30px!important}
+ .pt35{padding-top: 35px!important}
+ .pb10{padding-bottom: 10px!important}
+ .pb15{padding-bottom: 15px!important}
+ .pb20{padding-bottom: 20px!important}
+ .pb25{padding-bottom: 25px!important}
+ .pb30{padding-bottom: 30px!important}
+ .pb35{padding-bottom: 35px!important}
+ .pl0{padding-left: 0px!important}
+ .pl10{padding-left: 10px!important}
+ .pl15{padding-left: 15px!important}
+ .pl20{padding-left: 20px!important}
+ .pl25{padding-left: 25px!important}
+ .pl30{padding-left: 30px!important}
+ .pl35{padding-left: 35px!important}
+ .pr10{padding-right: 10px!important}
+ .pr15{padding-right: 15px!important}
+ .pr20{padding-right: 20px!important}
+ .pr25{padding-right: 25px!important}
+ .pr30{padding-right: 30px!important}
+ .pr35{padding-right: 35px!important}
+
+ /**
+  * 常用背景颜色
+  */
+.bg_f{background: #fff;}
+.bg_f2{background: #f2f2f2;}
+.bg_green{background: green!important;}
+.bg_cheng{background: orange!important;}
+.bg_sh{background: peru!important;}
+.bg_zi{background: purple!important;}
+.bg_hui{background: #666!important}
+.x-scroll{height: 100%; padding-bottom: 0!important;}
+.x-scroll .header{height: 40px; background: #f2f2f2; color: #222; border-bottom: 1px solid #ddd; line-height: 40px; display: flex; justify-content: space-between; padding: 0 10px; font-size: .95rem;}
+.no-data{display: block;width: 100%; height: auto;}
+.border-b1{border-bottom: 1px solid #eee;}
+.justify{text-align: justify}
